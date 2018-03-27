@@ -8,6 +8,14 @@
   </head>
   <body ng-app="mainApplication" ng-controller="mainController">
     <h1>Hello, {{name}}!</h1>
+    <section ng-repeat="artist in artists" ng-class="'artist-info'">
+
+        <img ng-src="{{artist.image[2]['#text']}}">
+        <h2>{{artist.name}}</h2>
+        <p>plays: {{artist.playcount}}</p>
+        <p>listens: {{artist.listeners}}</p>
+
+    </section>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="./main.js" charset="utf-8"></script>
   </body>
